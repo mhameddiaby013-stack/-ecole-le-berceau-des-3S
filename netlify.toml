@@ -1,0 +1,32 @@
+# Configuration de déploiement Netlify pour Les Écoles Le Berceau des 3S
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Redirections d'API vers les Serverless Functions Netlify
+[[redirects]]
+  from = "/api/facebook/posts"
+  to = "/.netlify/functions/facebook-posts"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/facebook/webhook"
+  to = "/.netlify/functions/facebook-webhook"
+  status = 200
+  force = true
+
+# Redirection SPA (Single Page Application) pour React
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# En-têtes de sécurité recommandés
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

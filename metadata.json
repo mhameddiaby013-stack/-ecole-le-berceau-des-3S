@@ -1,0 +1,6 @@
+{
+  "name": "Les Écoles Le Berceau des 3S - Site Officiel",
+  "description": "Portail web officiel des Écoles Le Berceau des 3S en Guinée (Conakry). Présentation, programmes scolaires, préinscriptions, actualités et intégration Facebook officielle.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
